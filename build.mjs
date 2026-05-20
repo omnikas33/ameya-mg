@@ -2,11 +2,12 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const root = resolve(".");
-const pages = ["index.html", "about.html", "services.html"];
+const pages = ["index.html", "about.html", "contact.html", "services.html"];
 
 const activeMap = {
   "index.html": "homeActive",
   "about.html": "aboutActive",
+  "contact.html": "contactActive",
   "services.html": "servicesActive",
 };
 
@@ -75,6 +76,7 @@ function renderHeader(activeKey) {
   const map = {
     homeActive: "",
     aboutActive: "",
+    contactActive: "",
     servicesActive: "",
   };
   map[activeKey] = 'class="active"';
